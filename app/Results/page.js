@@ -59,15 +59,24 @@ const Results = () => {
     /* Gets HOV lane results */
     const fetchHovLanes = async () => {
         console.log(coords);
-        
-        const testData = [
-            { name: 'HOV Lane 1', eta: '25', address: '123 this drive' },
-            { name: 'HOV Lane 2', eta: '57', address: '456 next ave' },
-            { name: 'HOV Lane 3', eta: '10', address: '789 after turn' },
-
-        ];
-        setHovLanes(testData);
+    
+        try {
+            const response = await fetch('/api/getHovLanes', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ location, coords }),
+            });
+    
+            if (!response.ok) throw new Error('Failed to fetch data');
+    
+            const data = await response.json();
+            setHovLanes(data);
+            console.log(data)
+        } catch (error) {
+            console.error(error);
+        }
     };
+    
 
     return (
         <div className={styles.page}>

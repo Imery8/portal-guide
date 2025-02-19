@@ -7,11 +7,6 @@ import Link from 'next/link';
 
 const Home = () => {
 
-  /* Finds Closest Hov Lanes */
-  const handleFindHovLanes = () => {
-    console.log("3 HOV LANES")
-  }
-
   return (
     <div className={styles.page}>
       <div>
@@ -31,8 +26,7 @@ const Home = () => {
         <Link href="/Results">
           <button 
           type="button"
-          className={styles.findHovBtn}
-          onClick={handleFindHovLanes}>
+          className={styles.findHovBtn}>
             FIND CLOSEST HOV LANES
           </button>
         </Link>
