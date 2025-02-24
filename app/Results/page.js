@@ -6,7 +6,7 @@ import {Navbar} from '@/components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCar, faLocationArrow, faLocationCrosshairs} from '@fortawesome/free-solid-svg-icons';
 
-/* Card Component */
+/* HOV lane resuts Card Component */
 const HovLaneCard = ({lane}) => (
     <div className={styles.card}>
         <div className={styles.details}>
@@ -50,8 +50,16 @@ const Results = () => {
         }
     };
 
+    /* Triggers fetchHovLanes() when location or coords is provided */
     useEffect(() => {
-        if (location || coords) {
+        if (location) {
+            const delayDebounceVal = setTimeout(() => {
+            fetchHovLanes();
+            }, 3000)
+
+            return () => clearTimeout(delayDebounceVal)
+        }
+        else if (coords) {
             fetchHovLanes();
         }
     }, [location, coords]);
@@ -59,6 +67,7 @@ const Results = () => {
     /* Gets HOV lane results */
     const fetchHovLanes = async () => {
         console.log(coords);
+        console.log(location)
     
         try {
             const response = await fetch('/api/getHovLanes', {
@@ -76,7 +85,6 @@ const Results = () => {
             console.error(error);
         }
     };
-    
 
     return (
         <div className={styles.page}>
