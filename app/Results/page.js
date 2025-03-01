@@ -4,8 +4,7 @@ import styles from "../page.module.css";
 import {Navbar} from '@/components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCar, faLocationArrow, faLocationCrosshairs} from '@fortawesome/free-solid-svg-icons';
-import AutoComplete from '../api/getHovLanes/AutoCompleteComponent/AutoComplete';
-import DurationCalculator from '../api/getHovLanes/DurationCalculator';
+import AutoComplete from './AutoComplete';
 
 
 
@@ -23,7 +22,7 @@ const HovLaneCard = ({lane}) => (
                 ETA: {lane.eta}
             </p>
             <button 
-             className={styles.selectButton}>
+             className={styles.selectButton} onClick={() => window.open(lane.address)}>
                 Select
                 <span className={styles.arrowIcon}>
                     <FontAwesomeIcon icon={faLocationArrow} />
@@ -98,7 +97,7 @@ const Results = () => {
             <div className={styles.resultsPageSpacing}>
 
 
-                <AutoComplete />
+                <AutoComplete onClick={fetchHovLanes} setLocation={setLocation}/>
                 
 
                 <div className={styles.centerOrDiv}>

@@ -1,12 +1,13 @@
 "use client"
+import { useState } from "react";
 import usePlacesAutocomplete, {
     getGeocode,
     getLatLng,
   } from "use-places-autocomplete";
   import useOnclickOutside from "react-cool-onclickoutside";
-  import styles from "../../../page.module.css"
+  import styles from "../page.module.css"
   
-  export default function AutoComplete(){
+  export default function AutoComplete({setLocation}){
     const {
       ready,
       value,
@@ -40,9 +41,11 @@ import usePlacesAutocomplete, {
         clearSuggestions();
   
         // Get latitude and longitude via utility functions
-        getGeocode({ address: description }).then((results) => {
+        getGeocode({ address: description }).then(async (results) => {
           const { lat, lng } = getLatLng(results[0]);
-          console.log("📍 Coordinates: ", { lat, lng });
+          const location = `${lat}%2c${lng}`
+          console.log("📍 Coordinates: ", { location });
+          setLocation(location);
         });
       };
   
