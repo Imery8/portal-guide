@@ -41,7 +41,7 @@ const Results = () => {
     const handleUserLocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
-                const coords = `${position.coords.latitude}%2C${position.coords.longitude}`;
+                const coords = {latitude: position.coords.latitude, longitude: position.coords.longitude};
                 setCoords(coords); // Ensure only the string is stored
                 console.log("📍 User Coordinates:", coords);
             });

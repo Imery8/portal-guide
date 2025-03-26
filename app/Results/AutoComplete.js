@@ -42,9 +42,9 @@ import usePlacesAutocomplete, {
   
         // Get latitude and longitude via utility functions
         getGeocode({ address: description }).then(async (results) => {
-          const { lat, lng } = getLatLng(results[0]);
-          const location = `${lat}%2c${lng}`
-          console.log("📍 Coordinates: ", { location });
+          const { latitude, longitude } = getLatLng(results[0]);
+          const location = {latitude, longitude};
+          console.log("📍 Coordinates: ", { latitude, longitude });
           setLocation(location);
         });
       };

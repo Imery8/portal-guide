@@ -1,15 +1,19 @@
 import DurationCalculator from "@/app/api/getHovLanes/DurationCalculator";
+import query from "@/app/api/getHovLanes/database"
 
 export async function POST(req) {
     try {
         const {coords, location}  = await req.json();
-        //console.log(location1);
-        const destination = "29.79051%2C-95.33971";
-        console.log(coords);
-        console.log(location);
-        const response = await DurationCalculator(coords || location, destination);
+        const dests = await query(coords || location);
+        console.log(dests);
+        const coords1 = `${coords.latitude}%2C${coords.longitude}`;
+        const location1 = `${location.lat}%2c${location.lng}`
+        const destination = dests;
+        console.log(coords1);
+        console.log(location1);
+        const response = await DurationCalculator(coords1 || location1, destination);
         const durationText = response;
-        const googleMapsLink = `https://www.google.com/maps/dir/${coords || location}/${destination}`;
+        const googleMapsLink = `https://www.google.com/maps/dir/${coords1 || location1}/${destination}`;
         const testData = [
             { name: 'HOV Lane 1', eta: durationText, address: googleMapsLink },
             { name: 'HOV Lane 2', eta: '57', address: 'Link 2' },
