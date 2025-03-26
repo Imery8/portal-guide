@@ -41,11 +41,18 @@ import usePlacesAutocomplete, {
         clearSuggestions();
   
         // Get latitude and longitude via utility functions
-        getGeocode({ address: description }).then(async (results) => {
-          const { latitude, longitude } = getLatLng(results[0]);
-          const location = {latitude, longitude};
-          console.log("📍 Coordinates: ", { latitude, longitude });
-          setLocation(location);
+        getGeocode({ address: description }).then((results) => {
+          console.log("Geocode results:", results);
+          if(results.length > 0){
+            const { lat, lng } = getLatLng(results[0]);
+            const latitude = lat;
+            const longitude = lng;
+            const location = {latitude, longitude};
+            console.log("📍 Coordinates: ", { location });
+            setLocation(location);
+          }else{
+            throw new Error("No results found");
+          }
         });
       };
   
