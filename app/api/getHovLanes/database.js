@@ -5,11 +5,11 @@ export default async function query(location){
         const mysql = require('mysql2');
 
         const connection = mysql.createConnection({
-            host: '129.7.84.135',
-            port: '3306',
-            user: 'sens25g3',
-            password: 'Sce3027193!!',
-            database: 'sens25g3',
+            host: '',
+            port: '',
+            user: '',
+            password: '',
+            database: '',
             connectTimeout: 10000
         }).promise();
         const lat = location.latitude;
