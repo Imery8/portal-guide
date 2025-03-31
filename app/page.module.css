@@ -526,24 +526,52 @@
 }
 
 /* Medium Mobile Device Styles */
-@media (min-width: 386px) and (max-width: 390px) {
+@media (min-width: 386px) and (max-width: 395px) {
   .resultsPageSpacing {
     top: -250px; 
   }
   /* Adjusting Cards on Medium devices*/
   .card {
-    width: 85%;
+    width: 70%;
     max-width: 22rem;
     top: -22rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 5px;
+
+  }
+
+  .titleLane {
+    font-size: 12px;
+  }
+
+  .etaBox {
+    width: 40%;
+    font-size: small;
+  }
+
+  .selectButton {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-small;
   }
     /* Adjusting Restart Button on Medium devices */
     .restartBtn {
-      top: -23rem;
+      top: -22rem;
+      margin-top: -160px;
+      font-size: small;
     }
 
     /* Adjusting Landing Page btn*/
     .findHovBtn {
       font-size: large;
+    }
+
+    /* Adjusting loader on Small devices */
+    .loader {
+      top: 80%;
     }
 }
 
