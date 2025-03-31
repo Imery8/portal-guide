@@ -496,17 +496,25 @@
 
   /* Adjusting Cards on Small devices*/
   .card {
-    width: 85%;
+    width: 70%;
     max-width: 22rem;
     top: -12rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 5px;
   }
 
   .titleLane {
-    font-size: 19px;
+    font-size: 11px;
   }
 
   .etaBox {
-    width: 45%;
+    width: 43%;
+    font-size: x-small;
+    margin-top: 1px;
+    margin-bottom: 10px;
+
   }
 
   /* Adjusting loader on Small devices */
@@ -514,9 +522,20 @@
     top: 75%;
   }
 
+  .selectButton {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-small;
+    padding: 6px;
+  }
+
     /* Adjusting Restart Button on Small devices */
     .restartBtn {
       top: -12rem;
+      margin-top: -240px;
+      font-size: x-small;
+      padding: 8px;
     }
 
     /* Adjusting Landing Page btn*/
