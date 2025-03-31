@@ -204,7 +204,7 @@
   margin: 10px;
   background-color: #f9f9f9;
   position: relative;
-  top: 0px;
+  top: -18rem;
   width: 25rem;
   visibility: hidden;
   animation: slideIn 0.6s ease-out forwards; 
@@ -257,6 +257,7 @@
 
   margin-left: 0rem;
   width: 100%;
+  cursor: pointer;
 }
 .selectButton:hover {
   background-color: #516d91;;
@@ -313,6 +314,68 @@
   border-color: #007bff;
 }
 
+/* Loading icon styles */
+.loader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bold;
+  gap: 10px;
+  top: 60%;
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinnerIcon {
+  display: inline-block;
+  animation: spin 2.5s linear infinite;
+}
+
+/* Restart btn styles */
+.restartBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 70%;
+  z-index: 10;
+  position: relative; 
+  top: -20rem;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #7e97b8;
+  background-color: #e0e8ef;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgba(255, 255, 255, 0.333);
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
+  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+}
+.restartBtn:hover {
+  color: #516d91;
+  background-color: #E5EDF5;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+ }
+ 
+ .restartBtn:active {
+  box-shadow: none;
+ }
+
 
 /* General Mobile Styles */
 @media (max-width: 500px) {
@@ -349,7 +412,7 @@
   .card {
     width: 90%;
     max-width: 22rem;
-    top: -100px;
+    top: -25rem;
   }
 
   .titleLane {
@@ -371,11 +434,22 @@
     max-width: 95%; 
     left: 3%;
   }
+
+  /* Adjusting loader */
+  .loader {
+    font-size: large;
+    top: 50%;
+  }
+
+  /* Adjusting Restart Button */
+  .restartBtn {
+    top: -27rem;
+  }
 }
 
 
 /* Small Mobile Device Styles */
-@media (max-width: 390px) {
+@media (max-width: 385px) {
   .resultsPageSpacing {
     top: -250px; 
   }
@@ -408,7 +482,7 @@
   .card {
     width: 85%;
     max-width: 22rem;
-    top: 0px;
+    top: -12rem;
   }
 
   .titleLane {
@@ -418,4 +492,92 @@
   .etaBox {
     width: 45%;
   }
+
+  /* Adjusting loader on Small devices */
+  .loader {
+    top: 55%;
+  }
+
+    /* Adjusting Restart Button on Small devices */
+    .restartBtn {
+      top: -12rem;
+    }
+
+    /* Adjusting Landing Page btn*/
+    .findHovBtn {
+      font-size: large;
+    }
+}
+
+/* Medium Mobile Device Styles */
+@media (min-width: 386px) and (max-width: 390px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on Medium devices*/
+  .card {
+    width: 85%;
+    max-width: 22rem;
+    top: -24rem;
+  }
+    /* Adjusting Restart Button on Medium devices */
+    .restartBtn {
+      top: -23rem;
+    }
+
+    /* Adjusting Landing Page btn*/
+    .findHovBtn {
+      font-size: large;
+    }
+}
+
+/* XS Mobile Device Styles */
+@media (max-width: 344px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on XS devices*/
+  .card {
+    width: 85%;
+    max-width: 22rem;
+    top: -25rem;
+  }
+    /* Adjusting Restart Button on XS devices */
+    .restartBtn {
+      top: -25rem;
+    }
+}
+
+/* XM Mobile Device Styles */
+@media (min-width: 360px) and (max-width: 370px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on XM devices*/
+  .card {
+    width: 85%;
+    max-width: 22rem;
+    top: -17rem;
+  }
+    /* Adjusting Restart Button on XM devices */
+    .restartBtn {
+      top: -17rem;
+    }
+}
+
+/* Large Mobile Device Styles */
+@media (min-width: 540px) and (max-width: 767px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on Medium devices*/
+  .card {
+    width: 85%;
+    max-width: 22rem;
+    top: -14rem;
+  }
+    /* Adjusting Restart Button on Medium devices */
+    .restartBtn {
+      top: -14rem;
+    }
 }
