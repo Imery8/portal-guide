@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   gap: 64px;
+  gap: 32px;
   font-family: var(--font-geist-sans);
 
   overflow: scroll;
@@ -22,12 +23,12 @@
   background: rgb(206,195,224);
   background: radial-gradient(circle, rgba(206,195,224,1) 0%, rgba(192,203,215,1) 100%);
 
-  margin-top: 60px;
+  padding-top: 60px;
 }
 
 /* Navbar styles*/
 .navbar {
-  width: 100vw; 
+  width: 100%; 
   height: 60px; 
   background: rgb(136,125,156);
   background: radial-gradient(circle, rgba(136,125,156,1) 0%, rgba(148,187,233,1) 100%);
@@ -250,7 +251,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  cursor: cursor;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,6 +367,9 @@
   transform: translate(0px, 0px) rotate(0deg);
   transition: 0.2s;
   box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+
+  margin-top: -400px;
+  padding: 12px 24px;
 }
 .restartBtn:hover {
   color: #516d91;
@@ -411,23 +415,29 @@
 
   /* Adjusting Cards */
   .card {
-    width: 90%;
+    width: 75%;
     max-width: 22rem;
     top: -25rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
   }
 
   .titleLane {
     font-size: 20px;
+    font-size: medium;
   }
 
   .etaBox {
     width: 40%;
+    font-size: medium;
   }
 
   .selectButton {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    font-size: x-small;
   }
 
   /* Adjusting Autocomplete Suggestions List */
@@ -448,6 +458,7 @@
   /* Adjusting Restart Button */
   .restartBtn {
     top: -27rem;
+    margin-top: -100px;
   }
 }
 
