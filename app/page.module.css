@@ -615,7 +615,7 @@
   }
 
   .titleLane {
-    font-size: 11px;
+    font-size: small;
   }
 
   .etaBox {
@@ -668,8 +668,6 @@
   .etaBox {
     width: 40%;
     font-size: x-small;
-    margin-top: 1px;
-    margin-bottom: 10px;
   }
 
     /* Adjusting Restart Button on XM devices */
@@ -695,14 +693,13 @@
     top: -25rem;
   }
   .etaBox {
-    width: 38%;
+    width: 40%;
     font-size: x-small;
-    margin-top: 1px;
-    margin-bottom: 10px;
   }
     /* Adjusting Restart Button on XS devices */
     .restartBtn {
       top: -25rem;
+      margin-top: -180px;
     }
 }
 
