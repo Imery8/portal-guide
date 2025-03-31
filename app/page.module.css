@@ -503,7 +503,6 @@
   .etaBox {
     width: 43%;
     font-size: medium;
-    margin-top: 5px;
   }
 
   .selectButton {
@@ -516,7 +515,7 @@
   /* Adjusting Restart Button on Medium devices*/
   .restartBtn {
     top: -25rem;
-    margin-top: -100px;
+    margin-top: -80px;
   }
 }
 
