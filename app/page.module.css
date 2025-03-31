@@ -479,14 +479,55 @@
   }
 }
 
-/* Medium Mobile Device Styles */
+/* Medium Mobile Devices Styles */
+@media (max-width: 418px) {
+  .resultsPageSpacing {
+    top: -300px;
+  }
+  
+  /* Adjusting Cards on Medium devices*/
+  .card {
+    width: 75%;
+    max-width: 22rem;
+    top: -25rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  .titleLane {
+    font-size: medium;
+  }
+
+  .etaBox {
+    width: 43%;
+    font-size: medium;
+    margin-top: 5px;
+  }
+
+  .selectButton {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-small;
+  }
+
+  /* Adjusting Restart Button on Medium devices*/
+  .restartBtn {
+    top: -25rem;
+    margin-top: -100px;
+  }
+}
+
+/* XM Mobile Device Styles */
 @media (max-width: 395px) {
   .resultsPageSpacing {
     top: -250px; 
   }
-  /* Adjusting Cards on Medium devices*/
+  /* Adjusting Cards on XM devices*/
   .card {
-    width: 70%;
+    width: 75%;
     max-width: 22rem;
     top: -22rem;
     margin-right: auto;
@@ -501,7 +542,7 @@
   }
 
   .etaBox {
-    width: 40%;
+    width: 43%;
     font-size: small;
   }
 
@@ -511,19 +552,19 @@
     margin-right: auto;
     font-size: x-small;
   }
-    /* Adjusting Restart Button on Medium devices */
+    /* Adjusting Restart Button on XM devices */
     .restartBtn {
       top: -22rem;
       margin-top: -160px;
       font-size: small;
     }
 
-    /* Adjusting Landing Page btn on Medium devices*/
+    /* Adjusting Landing Page btn on XM devices*/
     .findHovBtn {
       font-size: large;
     }
 
-    /* Adjusting loader on Medium devices */
+    /* Adjusting loader on XM devices */
     .loader {
       top: 80%;
     }
@@ -626,7 +667,6 @@
     font-size: x-small;
     margin-top: 1px;
     margin-bottom: 10px;
-
   }
 
     /* Adjusting Restart Button on XM devices */
@@ -646,9 +686,15 @@
   }
   /* Adjusting Cards on XS devices*/
   .card {
-    width: 85%;
+    width: 65%;
     max-width: 22rem;
     top: -25rem;
+  }
+  .etaBox {
+    width: 44%;
+    font-size: x-small;
+    margin-top: 1px;
+    margin-bottom: 10px;
   }
     /* Adjusting Restart Button on XS devices */
     .restartBtn {
