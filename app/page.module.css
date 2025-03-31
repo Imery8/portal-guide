@@ -381,6 +381,35 @@
   box-shadow: none;
  }
 
+  /* Medium Laptop Styles */
+@media (max-width: 1920px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+
+    /* Adjusting Cards on Medium Laptop */
+    .card {
+      top: -20rem;
+    }
+
+    .titleLane {
+      margin-top: 1px;
+      font-size: 20px;
+    }
+
+    /* Adjusting Restart Button on Meduium Laptop */
+    .restartBtn {
+      margin-top: -180px;
+    }
+
+  /* Adjusting loader on Large Tablet */
+  .loader {
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
  /* Large Tablet Device Styles */
 @media (max-width: 1024px) {
   .resultsPageSpacing {
@@ -396,6 +425,11 @@
     left: 50%;  
     transform: translate(-50%, -50%);
     width: 100%;
+  }
+
+  .titleLane {
+    margin-top: 16px;
+    font-size: 24px;
   }
 }
 
