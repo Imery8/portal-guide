@@ -393,7 +393,7 @@
 }
 
  /* Medium Tablet Device Styles */
- @media (max-width: 820px) {
+ @media (max-width: 834px) {
   .resultsPageSpacing {
     top: -250px; 
   }
