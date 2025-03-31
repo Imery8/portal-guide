@@ -381,6 +381,22 @@
   box-shadow: none;
  }
 
+ /* Large Mobile Device Styles */
+@media (min-width: 540px) and (max-width: 767px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on Medium devices*/
+  .card {
+    width: 85%;
+    max-width: 22rem;
+    top: -14rem;
+  }
+    /* Adjusting Restart Button on Medium devices */
+    .restartBtn {
+      top: -14rem;
+    }
+}
 
 /* General Mobile Styles */
 @media (max-width: 500px) {
@@ -463,6 +479,56 @@
   }
 }
 
+/* Medium Mobile Device Styles */
+@media (max-width: 395px) {
+  .resultsPageSpacing {
+    top: -250px; 
+  }
+  /* Adjusting Cards on Medium devices*/
+  .card {
+    width: 70%;
+    max-width: 22rem;
+    top: -22rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-bottom: 5px;
+
+  }
+
+  .titleLane {
+    font-size: 12px;
+  }
+
+  .etaBox {
+    width: 40%;
+    font-size: small;
+  }
+
+  .selectButton {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-small;
+  }
+    /* Adjusting Restart Button on Medium devices */
+    .restartBtn {
+      top: -22rem;
+      margin-top: -160px;
+      font-size: small;
+    }
+
+    /* Adjusting Landing Page btn on Medium devices*/
+    .findHovBtn {
+      font-size: large;
+    }
+
+    /* Adjusting loader on Medium devices */
+    .loader {
+      top: 80%;
+    }
+}
+
 
 /* Small Mobile Device Styles */
 @media (max-width: 385px) {
@@ -496,7 +562,7 @@
 
   /* Adjusting Cards on Small devices*/
   .card {
-    width: 70%;
+    width: 65%;
     max-width: 22rem;
     top: -12rem;
     margin-right: auto;
@@ -538,61 +604,40 @@
       padding: 8px;
     }
 
-    /* Adjusting Landing Page btn*/
+    /* Adjusting Landing Page btn on Small devices */
     .findHovBtn {
       font-size: large;
     }
 }
 
-/* Medium Mobile Device Styles */
-@media (min-width: 386px) and (max-width: 395px) {
+/* XM Mobile Device Styles */
+@media (max-width: 370px) {
   .resultsPageSpacing {
     top: -250px; 
   }
-  /* Adjusting Cards on Medium devices*/
+  /* Adjusting Cards on XM devices*/
   .card {
-    width: 70%;
+    width: 60%;
     max-width: 22rem;
-    top: -22rem;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 0px;
-    padding-bottom: 5px;
-
+    top: -17rem;
   }
-
-  .titleLane {
-    font-size: 12px;
-  }
-
   .etaBox {
     width: 40%;
-    font-size: small;
-  }
-
-  .selectButton {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     font-size: x-small;
+    margin-top: 1px;
+    margin-bottom: 10px;
+
   }
-    /* Adjusting Restart Button on Medium devices */
+
+    /* Adjusting Restart Button on XM devices */
     .restartBtn {
-      top: -22rem;
-      margin-top: -160px;
-      font-size: small;
-    }
-
-    /* Adjusting Landing Page btn*/
-    .findHovBtn {
-      font-size: large;
-    }
-
-    /* Adjusting loader on Small devices */
-    .loader {
-      top: 80%;
+      top: -17rem;
+      margin-top: -200px;
+      font-size: x-small;
+      padding: 8px;
     }
 }
+
 
 /* XS Mobile Device Styles */
 @media (max-width: 344px) {
@@ -611,36 +656,4 @@
     }
 }
 
-/* XM Mobile Device Styles */
-@media (min-width: 360px) and (max-width: 370px) {
-  .resultsPageSpacing {
-    top: -250px; 
-  }
-  /* Adjusting Cards on XM devices*/
-  .card {
-    width: 85%;
-    max-width: 22rem;
-    top: -17rem;
-  }
-    /* Adjusting Restart Button on XM devices */
-    .restartBtn {
-      top: -17rem;
-    }
-}
 
-/* Large Mobile Device Styles */
-@media (min-width: 540px) and (max-width: 767px) {
-  .resultsPageSpacing {
-    top: -250px; 
-  }
-  /* Adjusting Cards on Medium devices*/
-  .card {
-    width: 85%;
-    max-width: 22rem;
-    top: -14rem;
-  }
-    /* Adjusting Restart Button on Medium devices */
-    .restartBtn {
-      top: -14rem;
-    }
-}
