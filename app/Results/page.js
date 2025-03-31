@@ -37,7 +37,7 @@ const Results = () => {
     const [location, setLocation] = useState("");
     const [coords, setCoords] = useState(null);
     const [hovLanes, setHovLanes] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const handleUserLocation = () => {
         setLoading(true);

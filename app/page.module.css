@@ -326,6 +326,9 @@
   font-weight: bold;
   gap: 10px;
   top: 60%;
+  top: 50%;  
+  left: 50%;  
+  transform: translate(-50%, -50%);
   
 }
 
