@@ -527,7 +527,7 @@
   }
   /* Adjusting Cards on XM devices*/
   .card {
-    width: 75%;
+    width: 70%;
     max-width: 22rem;
     top: -22rem;
     margin-right: auto;
@@ -538,12 +538,13 @@
   }
 
   .titleLane {
-    font-size: 12px;
+    font-size: small;
   }
 
   .etaBox {
     width: 43%;
     font-size: small;
+    margin-top: 8px;
   }
 
   .selectButton {
@@ -557,6 +558,7 @@
       top: -22rem;
       margin-top: -160px;
       font-size: small;
+      width: 60%;
     }
 
     /* Adjusting Landing Page btn on XM devices*/
@@ -603,7 +605,7 @@
 
   /* Adjusting Cards on Small devices*/
   .card {
-    width: 65%;
+    width: 60%;
     max-width: 22rem;
     top: -12rem;
     margin-right: auto;
@@ -617,7 +619,7 @@
   }
 
   .etaBox {
-    width: 43%;
+    width: 40%;
     font-size: x-small;
     margin-top: 1px;
     margin-bottom: 10px;
@@ -643,6 +645,7 @@
       margin-top: -240px;
       font-size: x-small;
       padding: 8px;
+      width: 55%;
     }
 
     /* Adjusting Landing Page btn on Small devices */
@@ -674,7 +677,8 @@
       top: -17rem;
       margin-top: -200px;
       font-size: x-small;
-      padding: 8px;
+      padding: 8px;  
+      width: 50%;
     }
 }
 
@@ -686,12 +690,12 @@
   }
   /* Adjusting Cards on XS devices*/
   .card {
-    width: 65%;
+    width: 60%;
     max-width: 22rem;
     top: -25rem;
   }
   .etaBox {
-    width: 44%;
+    width: 38%;
     font-size: x-small;
     margin-top: 1px;
     margin-bottom: 10px;
