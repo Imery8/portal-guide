@@ -499,7 +499,7 @@
 
   /* Adjusting loader on Small devices */
   .loader {
-    top: 55%;
+    top: 75%;
   }
 
     /* Adjusting Restart Button on Small devices */
@@ -522,7 +522,7 @@
   .card {
     width: 85%;
     max-width: 22rem;
-    top: -24rem;
+    top: -22rem;
   }
     /* Adjusting Restart Button on Medium devices */
     .restartBtn {
