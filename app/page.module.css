@@ -326,10 +326,6 @@
   font-weight: bold;
   gap: 10px;
   top: 60%;
-  top: 50%;  
-  left: 50%;  
-  transform: translate(-50%, -50%);
-  
 }
 
 @keyframes spin {
@@ -443,7 +439,10 @@
   /* Adjusting loader */
   .loader {
     font-size: large;
-    top: 50%;
+    top: 60%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    width: 100%;
   }
 
   /* Adjusting Restart Button */
