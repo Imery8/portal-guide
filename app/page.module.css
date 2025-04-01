@@ -381,8 +381,37 @@
   box-shadow: none;
  }
 
+  /* Large Laptop Styles */
+  @media (max-width: 1800px) {
+    .resultsPageSpacing {
+      top: -250px; 
+    }
+  
+      /* Adjusting Cards on Large Laptop */
+      .card {
+        top: -20rem;
+      }
+  
+      .titleLane {
+        margin-top: 5px;
+        font-size: 22px;
+      }
+  
+      /* Adjusting Restart Button on Large Laptop */
+      .restartBtn {
+        margin-top: -140px;
+      }
+  
+    /* Adjusting loader on Large Laptop */
+    .loader {
+      left: 50%;  
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+
   /* Medium Laptop Styles */
-@media (max-width: 1920px) {
+@media (max-width: 1470px) {
   .resultsPageSpacing {
     top: -250px; 
   }
@@ -402,7 +431,7 @@
       margin-top: -180px;
     }
 
-  /* Adjusting loader on Large Tablet */
+  /* Adjusting loader on Medium Laptop */
   .loader {
     left: 50%;  
     transform: translate(-50%, -50%);
