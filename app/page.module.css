@@ -382,24 +382,16 @@
  }
 
   /* Large Laptop Styles */
-  @media (max-width: 1900px) {
-    .resultsPageSpacing {
-      top: -250px; 
-    }
-  
-      /* Adjusting Cards on Large Laptop */
-      .card {
-        top: -20rem;
-      }
-  
+  @media (max-width: 1920px) {
+
       .titleLane {
-        margin-top: 5px;
-        font-size: 22px;
+        margin-top: 10px;
+        font-size: 24px;
       }
   
       /* Adjusting Restart Button on Large Laptop */
       .restartBtn {
-        margin-top: -140px;
+        margin-top: -380px;
       }
   
     /* Adjusting loader on Large Laptop */
