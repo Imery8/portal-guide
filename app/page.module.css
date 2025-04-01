@@ -382,7 +382,7 @@
  }
 
   /* Large Laptop Styles */
-  @media (max-width: 1800px) {
+  @media (max-width: 1900px) {
     .resultsPageSpacing {
       top: -250px; 
     }
