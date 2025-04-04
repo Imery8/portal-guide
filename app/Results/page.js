@@ -65,17 +65,40 @@ const Results = () => {
     // Auto-scroll when hovLanes has data
     useEffect(() => {
         if (hovLanes.length > 0) {
-            console.log("SCROLL")
-            requestAnimationFrame(() => {
+            console.log("Attempting cross-browser scroll");
+            
+            // First immediate scroll attempt
+            window.scrollTo(0, 0);
+            
+            // Second attempt with slight delay for Chrome
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'instant' 
+                });
+                
+                // Auto scroll html and body for Chrome
+                document.documentElement.scrollTo({
+                    top: 0,
+                    behavior: 'instant'
+                });
+                
+                document.body.scrollTo({
+                    top: 0,
+                    behavior: 'instant'
+                });
+                
+                // Scroll the page container
                 const pageContainer = document.querySelector(`.${styles.page}`);
                 if (pageContainer) {
                     pageContainer.scrollTop = 0;
                 }
-                
+            }, 100);
+    
+            // Final attempt with longer delay 
+            setTimeout(() => {
                 window.scrollTo(0, 0);
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            });
+            }, 300);
         }
     }, [hovLanes]);
 
