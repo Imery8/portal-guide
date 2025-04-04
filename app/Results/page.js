@@ -65,40 +65,30 @@ const Results = () => {
     // Auto-scroll when hovLanes has data
     useEffect(() => {
         if (hovLanes.length > 0) {
-            console.log("Attempting cross-browser scroll");
-            
-            // First immediate scroll attempt
-            window.scrollTo(0, 0);
-            
-            // Second attempt with slight delay for Chrome
-            setTimeout(() => {
+            const scrollToTop = () => {
+                console.log('Current scroll position before:', window.pageYOffset);
+                
                 window.scrollTo({
-                    top: 0,
-                    behavior: 'instant' 
-                });
-                
-                // Auto scroll html and body for Chrome
-                document.documentElement.scrollTo({
-                    top: 0,
+                    top: -100,
                     behavior: 'instant'
                 });
                 
-                document.body.scrollTo({
-                    top: 0,
-                    behavior: 'instant'
-                });
+                document.documentElement.scrollTop = -100;
+                document.body.scrollTop = -100;
                 
-                // Scroll the page container
                 const pageContainer = document.querySelector(`.${styles.page}`);
                 if (pageContainer) {
                     pageContainer.scrollTop = 0;
                 }
-            }, 100);
     
-            // Final attempt with longer delay 
-            setTimeout(() => {
-                window.scrollTo(0, 0);
-            }, 300);
+                console.log('Current scroll position after:', window.pageYOffset);
+            };
+    
+            scrollToTop();
+    
+            [50, 150, 300].forEach(delay => {
+                setTimeout(scrollToTop, delay);
+            });
         }
     }, [hovLanes]);
 
