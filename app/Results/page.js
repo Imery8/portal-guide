@@ -65,6 +65,10 @@ const Results = () => {
     // Auto-scroll when hovLanes has data
     useEffect(() => {
         if (hovLanes.length > 0) {
+            console.log("SCROLL")
+            window.scrollTo(0, 0);
+            document.documentElementTop = 0;
+
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
