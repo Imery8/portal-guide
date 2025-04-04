@@ -94,10 +94,12 @@ const Results = () => {
         }
         setLoading(false);
 
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' 
-          });
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }, 100);
     };
     
     /* Sort HOV Lane results by ETA to display in order */
