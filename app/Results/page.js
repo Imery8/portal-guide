@@ -62,6 +62,16 @@ const Results = () => {
         }
     }, [location, coords]);
 
+    // Auto-scroll when hovLanes has data
+    useEffect(() => {
+        if (hovLanes.length > 0) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    }, [hovLanes]);
+
     /* Gets HOV lane results */
     const fetchHovLanes = async () => {
         setLoading(true);
@@ -78,15 +88,16 @@ const Results = () => {
     
             const data = await response.json();
             setHovLanes(data);
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // This makes it scroll smoothly instead of jumping
-              });
             console.log("HOV Lanes Data:", data);
         } catch (error) {
             console.error("Fetch Error:", error);
         }
         setLoading(false);
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
+          });
     };
     
     /* Sort HOV Lane results by ETA to display in order */
