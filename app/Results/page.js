@@ -65,29 +65,9 @@ const Results = () => {
     // Auto-scroll when hovLanes has data
     useEffect(() => {
         if (hovLanes.length > 0) {
-            const scrollToTop = () => {
-                console.log('Current scroll position before:', window.pageYOffset);
-                
-                window.scrollTo({
-                    top: -100,
-                    behavior: 'instant'
-                });
-                
-                document.documentElement.scrollTop = -100;
-                document.body.scrollTop = -100;
-                
-                const pageContainer = document.querySelector(`.${styles.page}`);
-                if (pageContainer) {
-                    pageContainer.scrollTop = 0;
-                }
-    
-                console.log('Current scroll position after:', window.pageYOffset);
-            };
-    
-            scrollToTop();
-    
-            [50, 150, 300].forEach(delay => {
-                setTimeout(scrollToTop, delay);
+            window.scrollTo({
+                top: -100,
+                behavior: 'instant'
             });
         }
     }, [hovLanes]);
@@ -113,13 +93,6 @@ const Results = () => {
             console.error("Fetch Error:", error);
         }
         setLoading(false);
-
-        setTimeout(() => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }, 100);
     };
     
     /* Sort HOV Lane results by ETA to display in order */
