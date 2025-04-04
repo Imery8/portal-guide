@@ -78,6 +78,10 @@ const Results = () => {
     
             const data = await response.json();
             setHovLanes(data);
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // This makes it scroll smoothly instead of jumping
+              });
             console.log("HOV Lanes Data:", data);
         } catch (error) {
             console.error("Fetch Error:", error);
