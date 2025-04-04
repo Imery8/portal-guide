@@ -23,7 +23,7 @@ const Home = () => {
       </div>
 
       <div>
-        <Link href="/Results">
+        <Link href="/Results" style={{textDecoration: 'none'}}>
           <button 
           type="button"
           className={styles.findHovBtn}>

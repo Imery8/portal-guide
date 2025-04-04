@@ -7,7 +7,7 @@ const Navbar = () => {
     return(
         <Link href="/">
             <div className={styles.navbar}>
-            <span>HOV Locator</span>
+            <span>HOV Entrance Locator</span>
             </div>
         </Link>
 
