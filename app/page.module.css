@@ -649,13 +649,13 @@
     width: 85%;
     min-width: 280px;
     max-width: 320px;
-    top: calc(35vh + 60px);
+    top: calc(40vh + 60px);
   }
 
   .card {
     width: 18rem;
     padding: 16px;
-    margin: 10px auto;
+    margin: 5px auto;
     padding-top: 0px;
     padding-bottom: 8px;
   }
