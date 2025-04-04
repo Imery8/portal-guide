@@ -576,6 +576,7 @@
     padding: 16px;
     margin: 5px auto;
     padding-top: 0px;
+    padding-bottom: 8px;
   }
 
   .titleLane {
@@ -593,7 +594,7 @@
   }
 
   .restartBtn {
-    top: 80px;
+    top: 0vh;
   }
 }
 
@@ -656,6 +657,7 @@
     padding: 16px;
     margin: 10px auto;
     padding-top: 0px;
+    padding-bottom: 8px;
   }
 
   .titleLane {
@@ -673,6 +675,6 @@
   }
 
   .restartBtn {
-    top: 90px;
+    top: 0vh;
   }
 }
