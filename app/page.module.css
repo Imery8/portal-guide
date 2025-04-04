@@ -569,11 +569,10 @@
   }
 
   .card {
-    width: 20rem;
+    width: 19rem;
     padding: 16px;
-    margin: 10px auto;
+    margin: 5px auto;
     padding-top: 0px;
-
   }
 
   .titleLane {
