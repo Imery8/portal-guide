@@ -533,7 +533,7 @@
   }
 
   .hovResults {
-    margin-top: -0.5rem;
+    margin-top: 1rem;
     padding: 0rem;
   }
 
@@ -587,6 +587,10 @@
 
   .loader {
     font-size: large;
+  }
+
+  .restartBtn {
+    top: 90px;
   }
 }
 
@@ -663,5 +667,9 @@
 
   .loader {
     font-size: medium;
+  }
+
+  .restartBtn {
+    top: 95px;
   }
 }
