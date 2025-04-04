@@ -66,12 +66,15 @@ const Results = () => {
     useEffect(() => {
         if (hovLanes.length > 0) {
             console.log("SCROLL")
-            window.scrollTo(0, 0);
-            document.documentElementTop = 0;
-
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+            requestAnimationFrame(() => {
+                const pageContainer = document.querySelector(`.${styles.page}`);
+                if (pageContainer) {
+                    pageContainer.scrollTop = 0;
+                }
+                
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
             });
         }
     }, [hovLanes]);

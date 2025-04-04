@@ -20,6 +20,9 @@
    font-family: var(--font-geist-sans);
    background: rgb(206,195,224);
    background: radial-gradient(circle, rgba(206,195,224,1) 0%, rgba(192,203,215,1) 100%);
+
+   overflow-y: scroll;
+   -webkit-overflow-scrolling: touch;
 }
 
 /* Navbar styles*/
