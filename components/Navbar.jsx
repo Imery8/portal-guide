@@ -10,7 +10,6 @@ const Navbar = () => {
             <span>HOV Entrance Locator</span>
             </div>
         </Link>
-
     );
 };
 

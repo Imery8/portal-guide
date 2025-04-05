@@ -6,6 +6,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCar, faLocationArrow, faLocationCrosshairs, faSpinner, faRotateRight} from '@fortawesome/free-solid-svg-icons';
 import AutoComplete from './AutoComplete';
 
+import { FeedbackLink } from '@/components';
+
 
 
 /* Card Component */
@@ -107,6 +109,7 @@ const Results = () => {
         <div className={styles.page}>
             <div>
                 <Navbar />
+                <FeedbackLink />
             </div>
 
             <div className={styles.resultsPageSpacing}>

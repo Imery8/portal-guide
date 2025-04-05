@@ -5,12 +5,15 @@ import styles from "./page.module.css";
 import {Navbar} from '../components';
 import Link from 'next/link';
 
+import { FeedbackLink } from "../components";
+
 const Home = () => {
 
   return (
     <div className={styles.page}>
       <div>
         <Navbar />
+        <FeedbackLink />
       </div>
 
       <div className={styles.mascot}>

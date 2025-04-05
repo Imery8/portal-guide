@@ -425,6 +425,27 @@
   box-shadow: none;
  }
 
+ /* Feedback Link */
+ .feedbackLink {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 999;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  font-size: 14px;
+  color: #516d91;
+  text-decoration: none;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+  transition: all 0.2s ease;
+}
+
+.feedbackLink:hover {
+  background-color: #E5EDF5;
+  box-shadow: -1px -1px 4px 0px #ffffff, 1px 1px 4px 0px rgb(95 157 231 / 48%);
+}
+
 
 
 /* Mobile Styles */
@@ -596,6 +617,12 @@
   .restartBtn {
     top: 0vh;
   }
+
+  .feedbackLink {
+    font-size: 12px;
+    padding: 6px 10px;
+    right: 0.3rem;
+  }
 }
 
 /* Small devices */
@@ -676,5 +703,11 @@
 
   .restartBtn {
     top: 0vh;
+  }
+
+  .feedbackLink {
+    font-size: 10px;
+    padding: 4px 8px;
+    right: 0.3rem;
   }
 }
