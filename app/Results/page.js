@@ -40,16 +40,36 @@ const Results = () => {
     const [coords, setCoords] = useState(null);
     const [hovLanes, setHovLanes] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
     const handleUserLocation = () => {
         setLoading(true);
+        setError("");
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position) => {
                 const coords = {latitude: position.coords.latitude, longitude: position.coords.longitude};
                 setCoords(coords); // Ensure only the string is stored
                 console.log("📍 User Coordinates:", coords);
                 setLoading(false);
-            });
+            },
+            (error) => {
+                setLoading(false);
+                switch(error.code) {
+                    case error.PERMISSION_DENIED:
+                        setError("Location access was denied. Please enable location access in your browser settings or enter your location manually");
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        setError("Location information is unavailable. Please try again or enter your location manually.");
+                        break;
+                    case error.TIMEOUT:
+                        setError("Location request timed out. Please try again or enter your location manually.");
+                        break;
+                    default:
+                        setError("An unknown error occurred. Please try again or enter your location manually.");
+                }
+            }
+            );
         } else {
             alert("Geolocation is not supported by this browser.");
             setLoading(false)
@@ -60,6 +80,7 @@ const Results = () => {
     /* Triggers fetchHovLanes() when location or coords is provided */
     useEffect(() => {
         if (location || coords) {
+            setError("");
             fetchHovLanes();
         }
     }, [location, coords]);
@@ -131,6 +152,13 @@ const Results = () => {
                         USE CURRENT LOCATION
                         <FontAwesomeIcon icon={faLocationCrosshairs} />
                     </button>
+
+                    {/* Gathering Current Location Error */}
+                    {error && (
+                        <div className={styles.currentLocErrorMsg}>
+                            {error}
+                        </div>
+                    )}
                    </>
                 )} 
             </div>

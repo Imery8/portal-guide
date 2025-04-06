@@ -481,6 +481,29 @@
   box-shadow: -1px -1px 4px 0px #ffffff, 1px 1px 4px 0px rgb(95 157 231 / 48%);
 }
 
+/* Current Location Error Msg*/
+.currentLocErrorMsg {
+  position: absolute;
+  top: 80vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-top: 10px;
+  text-align: center;
+  min-width: 30rem;
+  max-width: 40rem;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 /* Mobile Styles */
@@ -566,6 +589,12 @@
     width: 100%;
     padding: 10px;
     font-size: 14px;
+  }
+
+  .currentLocErrorMsg {
+    top: 100vh;
+    min-width: 25rem;
+    max-width: 30rem;
   }
 }
 
@@ -658,6 +687,11 @@
     padding: 6px 10px;
     right: 0.3rem;
   }
+
+  .currentLocErrorMsg {
+    min-width: 19rem;
+    max-width: 23rem;
+  }
 }
 
 /* Small devices */
@@ -744,5 +778,10 @@
     font-size: 10px;
     padding: 4px 8px;
     right: 0.3rem;
+  }
+
+  .currentLocErrorMsg {
+    min-width: 14rem;
+    max-width: 18rem;
   }
 }
