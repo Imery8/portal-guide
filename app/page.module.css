@@ -63,8 +63,8 @@
   justify-content: center;
   align-items: center;
   margin: auto auto 0 auto;
-  transform: translateY(-92%); 
-  position: relative;
+  position: absolute;
+  top: 25vh;
   z-index: 1;
 }
 
@@ -72,7 +72,8 @@
 .findHovBtn {
   position: absolute;
   left: 50%; 
-  transform: translate(-50%, -330%);
+  transform: translateX(-50%);
+  top: 70vh;
   display: block;
   margin: 2rem auto 0;
   min-width: 400px;
@@ -97,18 +98,16 @@
   overflow: hidden;
 }
 
-
 /* FindHovBtn Hover effect */
 .findHovBtn:hover {
   background: linear-gradient(145deg, #3b4343, #6e7f7e);
   border: 2px solid #6e7f7e;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.2);
-  transform: translate(-50%, -330%) scale(1.005);
+  transform: translate(-50%, -4px);
 }
 
 /* FindHovBtn Active animation */
 .findHovBtn:active {
-  transform: translate(-50%, -330%) scale(0.995);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1), -2px -2px 6px rgba(255, 255, 255, 0.1);
 }
 
@@ -512,22 +511,14 @@
 @media (max-width: 768px) {
 
   .mascot {
-    transform: translateY(-80%);
+    top: 25vh;
   }
   
   .findHovBtn {
     font-size: 25px;
     padding: 18px 30px;
-    transform: translate(-50%, -330%);
     min-width: 410px; 
-  }
-
-  .findHovBtn:hover {
-    transform: translate(-50%, -330%) scale(1.005);
-  }
-
-  .findHovBtn:active {
-    transform: translate(-50%, -330%) scale(0.995);
+    top: 72vh;
   }
 
   .locationInput {
@@ -602,22 +593,14 @@
 @media (max-width: 480px) {
 
   .mascot {
-    transform: translateY(-92%);
+    top: 28vh;
   }
   
   .findHovBtn {
     font-size: 23px;
     padding: 18px 30px;
-    transform: translate(-50%, -330%);
     min-width: 380px; 
-  }
-
-  .findHovBtn:hover {
-    transform: translate(-50%, -330%) scale(1.005);
-  }
-
-  .findHovBtn:active {
-    transform: translate(-50%, -330%) scale(0.995);
+    top: 70vh;
   }
 
   .hovResults {
@@ -697,7 +680,6 @@
 /* Small devices */
 @media (max-width: 350px) {
   .mascot {
-    transform: translateY(-20%);
     width: 100%; 
     max-width: 280px; 
     margin: auto;
@@ -707,15 +689,6 @@
     min-width: 290px;
     font-size: 18px; 
     padding: 15px 20px;
-    transform: translate(-50%, -330%);
-  }
-
-  .findHovBtn:hover {
-    transform: translate(-50%, -330%) scale(1.005);
-  }
-
-  .findHovBtn:active {
-    transform: translate(-50%, -330%) scale(0.995);
   }
 
   .locationInput {
