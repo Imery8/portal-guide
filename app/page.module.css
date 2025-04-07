@@ -617,14 +617,14 @@
 @media (max-width: 480px) {
 
   .mascot {
-    top: 28vh;
+    top: 20vh;
   }
   
   .findHovBtn {
     font-size: 23px;
     padding: 18px 30px;
     min-width: 380px; 
-    top: 70vh;
+    top: 62vh;
   }
 
   .hovResults {
@@ -702,7 +702,7 @@
 
   .trademark {
     font-size: 8px;
-    bottom: 10px;
+    bottom: 5px;
   }
   
   .trademark .title {
