@@ -6,6 +6,7 @@ import {Navbar} from '../components';
 import Link from 'next/link';
 
 import { FeedbackLink } from "../components";
+import { Trademark } from "../components";
 
 const Home = () => {
 
@@ -34,6 +35,7 @@ const Home = () => {
           </button>
         </Link>
       </div>
+      <Trademark />
     </div>
   );
 }
