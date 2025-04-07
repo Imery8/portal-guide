@@ -506,7 +506,7 @@
 /* Trademark */
 .trademark {
   position: fixed;
-  bottom: 20px;
+  bottom: 0.5vh;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -702,7 +702,7 @@
 
   .trademark {
     font-size: 8px;
-    bottom: 5px;
+    bottom: 0.5vh;
   }
   
   .trademark .title {
@@ -793,7 +793,7 @@
 
   .trademark {
     font-size: 7px;
-    bottom: 10px;
+    bottom: 0.5vh;
   }
   
   .trademark .title {
