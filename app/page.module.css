@@ -710,6 +710,22 @@
   }
 }
 
+/* Medium devices */
+@media (max-width: 390px) {
+  .mascot {
+    width: 100%; 
+    max-width: 280px; 
+    margin: auto;
+  }
+
+  .findHovBtn {
+    min-width: 320px;
+    font-size: 20px; 
+    padding: 15px 20px;
+    top: 68vh;
+  }
+}
+
 /* Small devices */
 @media (max-width: 350px) {
   .mascot {
