@@ -19,11 +19,11 @@
     "google-distance-matrix": "^1.1.1",
     "google-geocoder": "^0.2.1",
     "mysql2": "^3.13.0",
-    "next": "^15.2.2",
+    "next": "^15.5.7",
     "pg": "^8.14.1",
-    "react": "^19.0.0",
+    "react": "^19.2.1",
     "react-cool-onclickoutside": "^1.7.0",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.2.1",
     "use-places-autocomplete": "^4.0.1"
   },
   "devDependencies": {
